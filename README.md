@@ -11,8 +11,8 @@ classDef jobsMathStyle fill:#66B2FF,stroke:#333,stroke-width:1px
 AreaMath(["`**Математические основы ИИ (MF)**`"]):::areaMathStyle -->apectsMath(["Направления"]):::areasMath
 apectsMath -->aspectProbabilityStatistics(["Основы теории вероятностей, <br> математической статистики <br> и теории информации"]):::aspectMathStyle
 apectsMath -->aspectBayesStatistics(["Байесовская статистика <br> и моделирование"]):::aspectMathStyle
-apectsMath -->aspectNumericMethods(["Численные методы"]):::aspectMathStyle
-apectsMath -->aspectMLStatistics(["Статистические основы МО"]):::aspectMathStyle
+apectsMath -->aspectNumericMethods(["Численные <br> методы"]):::aspectMathStyle
+apectsMath -->aspectMLStatistics(["Статистические <br> основы МО"]):::aspectMathStyle
 apectsMath -->aspectAdditionalAIMath(["Дополнительные главы <br> математической теории ИИ"]):::aspectMathStyle
 
 AreaMath -->jobsMath(["Трудовые функции"]):::jobsMath
