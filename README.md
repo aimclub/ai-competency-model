@@ -1,5 +1,6 @@
 # Банк Компетенций
 ## Математика
+Банк компетенций представлен приведенным ниже набором простых mermaid-схем, каждая из которых отвечает за свою область. Элементы схемы, обозначающие роли и направления, являются кликабельными (CTRL + ЛКМ) ссылками, открывающими документ (markdown-файл) с более подробным описанием соответствующих компетенций.
 ```mermaid
 graph TD;
 classDef areaMathStyle fill:#CCFFFF,stroke:#333,stroke-width:1px
@@ -196,4 +197,69 @@ areaPL -->aspectCPP(["C/C++ (PL 3)"]):::PL3Style
 click aspectPython "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectPython.md"
 click aspectJava "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectJava.md"
 click aspectCPP "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectCPP.md"
+```
+
+```mermaid
+graph TD;
+classDef LC1Style fill:#CCE5FF,stroke:#333,stroke-width:1px
+classDef LC2Style fill:#66B2FF,stroke:#333,stroke-width:1px
+classDef LC3Style fill:#3399FF,stroke:#333,stroke-width:1px
+classDef LC4Style fill:#6666FF,stroke:#333,stroke-width:1px
+classDef LC5Style fill:#B266FF,stroke:#333,stroke-width:1px
+classDef jobsLCStyle fill:#CCFFFF,stroke:#333,stroke-width:1px
+
+areaLC{{"`**Жизненный цикл систем ИИ**`"}}:::LC1Style -->aspectBusinessProblem(["Понимание бизнес-проблемы <br> (LC 1, LC 2)"]):::LC1Style
+areaLC -->aspectEXModeling(["Моделирование, проведение <br> экспериментов (LC 2)"]):::LC1Style
+areaLC -->aspectAISysArchitecture(["Архитектура систем ИИ <br> Проектирование (ML System Design) <br> (LC 3)"]):::LC1Style
+areaLC -->aspectLCControl(["Управление процессами <br> жизненного цикла ИИ <br> продукта (LC 4, LC 5)"]):::LC2Style
+areaLC -->aspectIndustrialAI(["Промышленная разработка <br> систем ИИ, развертывание <br> и эксплуатация (LC 6)"]):::LC3Style
+areaLC -->aspectAIDataCompetencies(["Центр компетенций <br> по ИИ и работе с <br> данными (LC 7)"]):::LC4Style
+areaLC -->aspectStrategyEcoSystemAI(["Стратегия ИИ. Цифровая <br> экосистема с ИИ (LC 8)"]):::LC5Style
+
+aspectBusinessProblem ---jobsLC["Роли"]:::LC1Style
+aspectEXModeling ---jobsLC
+aspectAISysArchitecture ---jobsLC
+aspectLCControl ---jobsLC
+aspectIndustrialAI ---jobsLC
+aspectAIDataCompetencies ---jobsLC
+aspectStrategyEcoSystemAI ---jobsLC
+
+jobsLC -->jobAIPM(["AI PM"]):::jobsLCStyle
+jobsLC -->jobAIArchitect(["AI Architect"]):::jobsLCStyle
+jobsLC -->jobDomainMLSpecialist(["Domain ML Specialist"]):::jobsLCStyle
+jobsLC -->jobMLResearcher(["ML Researcher"]):::jobsLCStyle
+jobsLC -->jobDataArchitect(["Data Architect"]):::jobsLCStyle
+jobsLC -->jobDataEngineer(["Data Engineer"]):::jobsLCStyle
+jobsLC -->jobDataAnalyst(["Data Analyst"]):::jobsLCStyle
+jobsLC -->jobAICDO(["AI CDO"]):::jobsLCStyle
+
+click jobAIPM "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIPM.md"
+click jobAIArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIArchitect.md"
+click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md"
+click jobMLResearcher "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLResearcher.md"
+click jobDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataArchitect.md"
+click jobDataEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataEngineer.md"
+click jobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md"
+click jobAICDO "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAICDO.md"
+
+click aspectBusinessProblem "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectBusinessProblem.md"
+click aspectEXModeling "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectEXModeling.md"
+click aspectAISysArchitecture "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectAISysArchitecture.md"
+click aspectLCControl "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectLCControl.md"
+click aspectIndustrialAI "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectIndustrialAI.md"
+click aspectAIDataCompetencies "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectAIDataCompetencies.md"
+click aspectStrategyEcoSystemAI "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectStrategyEcoSystemAI.md"
+```
+
+```mermaid
+graph TD;
+classDef AIS1Style fill:#CC99FF,stroke:#333,stroke-width:1px
+classDef AIS2Style fill:#B266FF,stroke:#333,stroke-width:1px
+
+areaAIS{{"`**Безопасность ИИ**`"}}:::AIS1Style -->aspectTrustedAI(["Доверенный ИИ, управление <br> рисками и безопасностью <br> систем ИИ (AI S 1)"]):::AIS2Style
+aspectTrustedAI -->jobAISecurityEngineer(["AI Security Engineer"]):::AIS1Style
+
+click aspectTrustedAI "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/AIS/aspectTrustedAI.md"
+
+click jobAISecurityEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAISecurityEngineer.md"
 ```
