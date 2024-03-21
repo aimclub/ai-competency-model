@@ -1,4 +1,4 @@
-# Competence-Bank
+# Банк Компетенций
 ## Математика
 ```mermaid
 graph TD;
