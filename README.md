@@ -60,6 +60,13 @@ aspectDataStoraging -->jobsDataEngineer3(["Data <br> Engineer"]):::BD3Style
 aspectDataProcessing -->jobsDataEngineer4(["Data Engineer"]):::BD5Style
 aspectBDInfrastructure -->jobsDataEngineer4
 
+click aspectPreDataAnalysis "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectPreDataAnalysis.md"
+click aspectDataMarkCollection "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectDataMarkCollection.md"
+click aspectDataUnderstanding "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectDataUnderstanding.md"
+click aspectDataStoraging "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectDataStoraging.md"
+click aspectDataProcessing "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectDataProcessing.md"
+click aspectBDInfrastructure "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectBDInfrastructure.md"
+
 click jobsDataEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobDataEngineer.md"
 click jobsDataEngineer3 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobDataEngineer.md"
 click jobsDataEngineer4 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobDataEngineer.md"
