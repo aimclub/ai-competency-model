@@ -66,7 +66,7 @@ click jobsDataEngineer4 "https://github.com/VoidSubjucator/Competence-Bank/blob/
 
 click jobsDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/jobDataAnalyst.md"
 click jobsAIPM "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobAIPM.md"
-click jobsDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/jobDataAnalyst.md"
+click jobsDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/jobDomainMLSpecialist.md"
 
 click jobsDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobDataArchitect.md"
 ```
