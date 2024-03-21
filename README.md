@@ -162,7 +162,25 @@ click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/b
 click jobAIArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIArchitect.md"
 ```
 
+```mermaid
+graph TD;
+classDef O1Style fill:#FFCCCC,stroke:#333,stroke-width:1px
+classDef O2Style fill:#FF9999,stroke:#333,stroke-width:1px
+classDef O3Style fill:#FF6666,stroke:#333,stroke-width:1px
+classDef O4Style fill:#FF3333,stroke:#333,stroke-width:1px
 
+areaO{{"`**Другие направления ИИ**`"}}:::O1Style -->aspectKnowledgeManagement(["Управление знаниями (O 1)"]):::O2Style
+areaO -->aspectMultiAgentAlgo(["Мульти-агентные алгоритмы (O 2)"]):::O3Style
+areaO -->aspectIntellectualOpti(["Интеллектуальные методы оптимизации (O 3)"]):::O4Style
+
+aspectKnowledgeManagement ---jobDataArchitect(["Data Architect"]):::O1Style
+
+click aspectKnowledgeManagement "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/Other/aspectKnowledgeManagement.md"
+click aspectMultiAgentAlgo "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/Other/aspectMultiAgentAlgo.md"
+click aspectIntellectualOpti "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/Other/aspectIntellectualOpti.md"
+
+click jobDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataArchitect.md"
+```
 
 ## Разработка
 
