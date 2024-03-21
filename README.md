@@ -49,7 +49,7 @@ areaBD -->aspectBDInfrastructure(["Дополнительные технолог
 aspectPreDataAnalysis -->jobDataEngineer(["Data Engineer"]):::BD1Style
 aspectDataMarkCollection -->jobDataEngineer
 
-aspectDataUnderstanding -->jobDataAnalyst(["Data <br> Analyst"]):::BD2Style
+aspectDataUnderstanding -->jobDataAnalyst(["Data Analyst"]):::BD2Style
 aspectDataUnderstanding -->jobAIPM(["AI PM"]):::BD2Style
 aspectDataUnderstanding -->jobDomainMLSpecialist(["Domain ML <br> Specialist"]):::BD2Style
 
