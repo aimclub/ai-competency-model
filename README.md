@@ -122,6 +122,46 @@ click jobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/mai
 click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md"
 ```
 
+```mermaid
+graph TD;
+classDef DL1Style fill:#FDE406,stroke:#333,stroke-width:1px
+classDef DL2Style fill:#CCCC00,stroke:#333,stroke-width:1px
+classDef DL3Style fill:#E5CA1C,stroke:#333,stroke-width:1px
+classDef DL4Style fill:#FFE5CC,stroke:#333,stroke-width:1px
+classDef DL5Style fill:#FFCC99,stroke:#333,stroke-width:1px
+classDef DLJobStyle fill:#ffd700,stroke:#333,stroke-width:1px
+
+areaDL{{"`**Глубокое обучение**`"}}:::DL1Style -->aspectDeepNeuro(["Нейронные сети, глубокие <br> нейронные сети (DL 1)"]):::DL1Style
+areaDL -->aspectDeepNeuroArchitecture(["Современные архитектуры <br> генеративных глубоких <br> сетей (DL 2)"]):::DL2Style
+areaDL -->aspectComputerVision(["Компьютерное <br> зрение (DL 3)"]):::DL3Style
+areaDL -->aspectLanguageProcessing(["Обработка естественного <br> языка (DL 4)"]):::DL4Style
+areaDL -->aspectVoiceRecognition(["Распознавание и <br> генерация речи (DL 5)"]):::DL5Style
+
+aspectDeepNeuro ---jobsHeaderDL["Трудовые Функции"]:::DL1Style
+aspectDeepNeuroArchitecture ---jobsHeaderDL
+aspectComputerVision ---jobsHeaderDL
+aspectLanguageProcessing ---jobsHeaderDL
+aspectVoiceRecognition ---jobsHeaderDL
+
+jobsHeaderDL -->jobMLResearcher(["ML Researcher"]):::DLJobStyle
+jobsHeaderDL -->jobMLEngineer(["ML Engineer"]):::DLJobStyle
+jobsHeaderDL -->jobDataAnalyst(["Data Analyst"]):::DLJobStyle
+jobsHeaderDL -->jobDomainMLSpecialist(["Domain ML Specialist"]):::DLJobStyle
+jobsHeaderDL -->jobAIArchitect(["AI Architect"]):::DLJobStyle
+
+click aspectDeepNeuro "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectDeepNeuro.md"
+click aspectDeepNeuroArchitecture "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectDeepNeuroArchitecture.md"
+click aspectComputerVision "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectComputerVision.md"
+click aspectLanguageProcessing "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectLanguageProcessing.md"
+click aspectVoiceRecognition "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectVoiceRecognition.md"
+
+click jobMLResearcher "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLResearcher.md"
+click jobMLEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLEngineer.md"
+click jobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md"
+click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md"
+click jobAIArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIArchitect.md"
+```
+
 
 
 ## Разработка
