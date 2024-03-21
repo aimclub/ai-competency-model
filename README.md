@@ -54,8 +54,8 @@ aspectDataUnderstanding -->jobAIPM(["AI PM"]):::BD2Style
 aspectDataUnderstanding -->jobDomainMLSpecialist(["Domain ML <br> Specialist"]):::BD2Style
 
 aspectDataUnderstanding -->jobDataEngineer3(["Data <br> Engineer"]):::BD3Style
-aspectDataStoraging -->jobDataArchitect(["Data <br> Architect"]):::BD3Style
-aspectDataStoraging -->jobDataEngineer3(["Data <br> Engineer"]):::BD3Style
+aspectDataStoraging -->jobDataArchitect(["Data Architect"]):::BD3Style
+aspectDataStoraging -->jobDataEngineer3(["Data Engineer"]):::BD3Style
 
 aspectDataProcessing -->jobDataEngineer4(["Data Engineer"]):::BD5Style
 aspectBDInfrastructure -->jobDataEngineer4
