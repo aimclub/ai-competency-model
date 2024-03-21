@@ -33,22 +33,43 @@ click MathJobsMLResearcher "https://github.com/VoidSubjucator/Competence-Bank/bl
 
 ```mermaid
 graph TD;
-classDef areaDataEngineeringStyle fill:#FFFF33,stroke:#333,stroke-width:1px
-classDef aspectDataEngineeringStyle fill:#3BE0EC,stroke:#333,stroke-width:1px
-classDef jobsDataEngineeringStyle fill:#66B2FF,stroke:#333,stroke-width:1px
+classDef BD1Style fill:#CCFFCC,stroke:#333,stroke-width:1px
+classDef BD2Style fill:#99FF99,stroke:#333,stroke-width:1px
+classDef BD3Style fill:#66FF66,stroke:#333,stroke-width:1px
+classDef BD4Style fill:#80FF00,stroke:#333,stroke-width:1px
+classDef BD5Style fill:#00CC00,stroke:#333,stroke-width:1px
 
-AreaMath(["`**Математические основы ИИ (MF)**`"]):::areaMathStyle ---apectsMath(["Направления"]):::areasMath
-apectsMath ---MathAspect1(["Основы теории вероятностей, <br> математической статистики <br> и теории информации"]):::aspectMathStyle
-apectsMath ---MathAspect2(["Байесовская статистика <br> и моделирование"]):::aspectMathStyle
+areaBD(["`**Работа с данными**`"]):::BD1Style -->aspectPreDataAnalysis(["Предварительный <br> анализ данных (BD 1)"]):::BD1Style
+areaBD -->aspectDataMarkCollection(["Методы и инструменты сбора <br> и разметки данных (BD 1)"]):::BD1Style
+areaBD -->aspectDataUnderstanding(["Понимание <br> данных (BD 2)"]):::BD2Style
+areaBD -->aspectDataStoraging(["Модели (технологии) <br> хранения данных (BD 3)"]):::BD3Style
+areaBD -->aspectDataProcessing(["Модели (технологии) <br> обработки данных (BD 4)"]):::BD4Style
+areaBD -->aspectBDInfrastructure(["Дополнительные технологии <br> организации инфраструктуры БД (BD 5)"]):::BD5Style
 
-AreaMath ---jobsMath(["Трудовые функции"]):::jobsMath
-jobsMath ---MathJobsDataAnalyst(["Data Analyst"]):::jobsMathStyle
-jobsMath ---MathJobsDomainMLSpecialist(["Domain ML Specialist"]):::jobsMathStyle
-jobsMath ---MathJobsMLResearcher(["ML Researcher"]):::jobsMathStyle
+aspectPreDataAnalysis -->jobsDataEngineer(["Data Engineer"]):::BD1Style
+aspectDataMarkCollection -->jobsDataEngineer
 
-click MathJobsDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/DataAnalyst.md"
-click MathJobsDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/DomainMLSpecialist.md"
-click MathJobsMLResearcher "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/MLResearcher.md"
+aspectDataUnderstanding -->jobsDataAnalyst(["Data <br> Analyst"]):::BD2Style
+aspectDataUnderstanding -->jobsAIPM(["AI PM"]):::BD2Style
+aspectDataUnderstanding -->jobsDomainMLSpecialist(["Domain ML <br> Specialist"]):::BD2Style
+
+aspectDataUnderstanding -->jobsDataEngineer3(["Data <br> Engineer"]):::BD3Style
+aspectDataStoraging -->jobsDataArchitect(["Data <br> Architect"]):::BD3Style
+aspectDataStoraging -->jobsDataEngineer3(["Data <br> Engineer"]):::BD3Style
+
+aspectDataProcessing -->jobsDataEngineer4(["Data Engineer"]):::BD5Style
+aspectBDInfrastructure -->jobsDataEngineer4
+
+click jobsDataEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/DataEngineer.md"
+click jobsDataEngineer3 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/DataEngineer.md"
+click jobsDataEngineer4 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/DataEngineer.md"
+
+
+click jobsDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/DataAnalyst.md"
+click jobsAIPM "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/AIPM.md"
+click jobsDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/DataAnalyst.md"
+
+click jobsDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/DataArchitect.md"
 ```
 
 ## Разработка
