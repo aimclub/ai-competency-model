@@ -60,16 +60,15 @@ aspectDataStoraging -->jobsDataEngineer3(["Data <br> Engineer"]):::BD3Style
 aspectDataProcessing -->jobsDataEngineer4(["Data Engineer"]):::BD5Style
 aspectBDInfrastructure -->jobsDataEngineer4
 
-click jobsDataEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/DataEngineer.md"
-click jobsDataEngineer3 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/DataEngineer.md"
-click jobsDataEngineer4 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/DataEngineer.md"
+click jobsDataEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobDataEngineer.md"
+click jobsDataEngineer3 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobDataEngineer.md"
+click jobsDataEngineer4 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobDataEngineer.md"
 
+click jobsDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/jobDataAnalyst.md"
+click jobsAIPM "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobAIPM.md"
+click jobsDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/jobDataAnalyst.md"
 
-click jobsDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/DataAnalyst.md"
-click jobsAIPM "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/AIPM.md"
-click jobsDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/DataAnalyst.md"
-
-click jobsDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/DataArchitect.md"
+click jobsDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/jobDataArchitect.md"
 ```
 
 ## Разработка
