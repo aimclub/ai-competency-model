@@ -8,14 +8,18 @@ classDef jobMath fill:#99CCFF,stroke:#333,stroke-width:1px
 classDef aspectMathStyle fill:#3BE0EC,stroke:#333,stroke-width:1px
 classDef jobMathStyle fill:#66B2FF,stroke:#333,stroke-width:1px
 
-AreaMath{{"`**Математические основы ИИ (MF)**`"}}:::areaMathStyle -->apectsMath["Направления"]:::areasMath
-apectsMath -->aspectProbabilityStatistics(["Основы теории вероятностей, <br> математической статистики <br> и теории информации"]):::aspectMathStyle
-apectsMath -->aspectBayesStatistics(["Байесовская статистика <br> и моделирование"]):::aspectMathStyle
-apectsMath -->aspectNumericMethods(["Численные <br> методы"]):::aspectMathStyle
-apectsMath -->aspectMLStatistics(["Статистические <br> основы МО"]):::aspectMathStyle
-apectsMath -->aspectAdditionalAIMath(["Дополнительные главы <br> математической теории ИИ"]):::aspectMathStyle
+AreaMath{{"`**Математические основы ИИ (MF 1)**`"}}:::areaMathStyle -->aspectProbabilityStatistics(["Основы теории вероятностей, <br> математической статистики <br> и теории информации"]):::aspectMathStyle
+AreaMath -->aspectBayesStatistics(["Байесовская статистика <br> и моделирование"]):::aspectMathStyle
+AreaMath -->aspectNumericMethods(["Численные <br> методы"]):::aspectMathStyle
+AreaMath -->aspectMLStatistics(["Статистические <br> основы МО"]):::aspectMathStyle
+AreaMath -->aspectAdditionalAIMath(["Дополнительные главы <br> математической теории ИИ"]):::aspectMathStyle
 
-AreaMath -->jobsMath["Трудовые функции"]:::jobMath
+aspectProbabilityStatistics ---jobsMath["Роли"]:::jobMath
+aspectBayesStatistics ---jobsMath
+aspectNumericMethods ---jobsMath
+aspectMLStatistics ---jobsMath
+aspectAdditionalAIMath ---jobsMath
+
 jobsMath -->MathJobDataAnalyst(["Data Analyst"]):::jobMathStyle
 jobsMath -->MathJobDomainMLSpecialist(["Domain ML Specialist"]):::jobMathStyle
 jobsMath -->MathJobMLResearcher(["ML Researcher"]):::jobMathStyle
@@ -38,6 +42,7 @@ classDef BD2Style fill:#99FF99,stroke:#333,stroke-width:1px
 classDef BD3Style fill:#66FF66,stroke:#333,stroke-width:1px
 classDef BD4Style fill:#80FF00,stroke:#333,stroke-width:1px
 classDef BD5Style fill:#00CC00,stroke:#333,stroke-width:1px
+classDef BDJobsStyle fill:#50c878,stroke:#333,stroke-width:1px
 
 areaBD{{"`**Работа с данными**`"}}:::BD1Style -->aspectPreDataAnalysis(["Предварительный <br> анализ данных (BD 1)"]):::BD1Style
 areaBD -->aspectDataMarkCollection(["Методы и инструменты сбора <br> и разметки данных (BD 1)"]):::BD1Style
@@ -46,19 +51,18 @@ areaBD -->aspectDataStoraging(["Модели (технологии) <br> хра�
 areaBD -->aspectDataProcessing(["Модели (технологии) <br> обработки данных (BD 4)"]):::BD4Style
 areaBD -->aspectBDInfrastructure(["Дополнительные технологии <br> организации инфраструктуры БД (BD 5)"]):::BD5Style
 
-aspectPreDataAnalysis -->jobDataEngineer(["Data Engineer"]):::BD1Style
-aspectDataMarkCollection -->jobDataEngineer
+aspectPreDataAnalysis ---BDJobs["Роли"]:::BD1Style
+aspectDataMarkCollection ---BDJobs
+aspectDataUnderstanding ---BDJobs
+aspectDataStoraging ---BDJobs
+aspectDataProcessing ---BDJobs
+aspectBDInfrastructure ---BDJobs
 
-aspectDataUnderstanding -->jobDataAnalyst(["Data Analyst"]):::BD2Style
-aspectDataUnderstanding -->jobAIPM(["AI PM"]):::BD2Style
-aspectDataUnderstanding -->jobDomainMLSpecialist(["Domain ML <br> Specialist"]):::BD2Style
-
-aspectDataUnderstanding -->jobDataEngineer3(["Data <br> Engineer"]):::BD3Style
-aspectDataStoraging -->jobDataArchitect(["Data Architect"]):::BD3Style
-aspectDataStoraging -->jobDataEngineer3(["Data Engineer"]):::BD3Style
-
-aspectDataProcessing -->jobDataEngineer4(["Data Engineer"]):::BD5Style
-aspectBDInfrastructure -->jobDataEngineer4
+BDJobs -->jobDataEngineer(["Data Engineer"]):::BDJobsStyle
+BDJobs -->jobDataAnalyst(["Data Analyst"]):::BD2Style
+BDJobs -->jobAIPM(["AI PM"]):::BD2Style
+BDJobs -->jobDomainMLSpecialist(["Domain ML <br> Specialist"]):::BD2Style
+BDJobs -->jobDataArchitect(["Data Architect"]):::BD3Style
 
 click aspectPreDataAnalysis "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectPreDataAnalysis.md"
 click aspectDataMarkCollection "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectDataMarkCollection.md"
@@ -68,13 +72,9 @@ click aspectDataProcessing "https://github.com/VoidSubjucator/Competence-Bank/bl
 click aspectBDInfrastructure "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectBDInfrastructure.md"
 
 click jobDataEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataEngineer.md"
-click jobDataEngineer3 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataEngineer.md"
-click jobDataEngineer4 "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataEngineer.md"
-
 click jobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md"
 click jobAIPM "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIPM.md"
 click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md"
-
 click jobDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataArchitect.md"
 ```
 
@@ -95,7 +95,7 @@ areaML -->aspectReinforcementLearning(["Обучение с <br> подкреп�
 areaML -->aspectAutoML(["Автоматическое машинное <br> обучение (ML 5)"]):::ML5Style
 areaML -->aspectNonStandardLearningAlgo(["Алгоритмы обучения <br> на нестандартных объемах <br> данных (ML 6)"]):::ML6Style
 
-aspectHistoryTrends ---jobsHeaderML["Трудовые Функции"]:::ML1Style
+aspectHistoryTrends ---jobsHeaderML["Роли"]:::ML1Style
 aspectClassicAlgo ---jobsHeaderML
 aspectMLStability ---jobsHeaderML
 aspectReinforcementLearning ---jobsHeaderML
@@ -137,7 +137,7 @@ areaDL -->aspectComputerVision(["Компьютерное <br> зрение (DL 
 areaDL -->aspectLanguageProcessing(["Обработка естественного <br> языка (DL 4)"]):::DL4Style
 areaDL -->aspectVoiceRecognition(["Распознавание и <br> генерация речи (DL 5)"]):::DL5Style
 
-aspectDeepNeuro ---jobsHeaderDL["Трудовые Функции"]:::DL1Style
+aspectDeepNeuro ---jobsHeaderDL["Роли"]:::DL1Style
 aspectDeepNeuroArchitecture ---jobsHeaderDL
 aspectComputerVision ---jobsHeaderDL
 aspectLanguageProcessing ---jobsHeaderDL
