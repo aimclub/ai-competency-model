@@ -1,4 +1,4 @@
-# Направление: Обработка естесственного языка
+# Направление: Обработка естественного языка
 ## Индикаторы
 * Применение (проводя выбор и эксперименты) известных алгоритмов и библиотек для обработки естественного языка, предобученных глубоких нейросетевых моделей для прикладных задач анализа текстов, при необходимости дообучая и валидируя на собственных наборах данных [Data Analyst](https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md), [Domain ML Specialist](https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md)
 * Определение стека технологий, методов и алгоритмов для построения продуктов с обработкой естественного языка (диалоговые системы, вопросно-ответные системы, рекомендательные системы и т.д.) [AI Architect](https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIArchitect.md)
