@@ -183,4 +183,17 @@ click jobDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/m
 ```
 
 ## Разработка
+```mermaid
+graph TD;
+classDef PL1Style fill:#FFCCE5,stroke:#333,stroke-width:1px
+classDef PL2Style fill:#DC71C3,stroke:#333,stroke-width:1px
+classDef PL3Style fill:#B445C0,stroke:#333,stroke-width:1px
 
+areaPL{{"`**Языки программирования**`"}}:::PL1Style -->aspectPython(["Python (PL 1)"]):::PL1Style
+areaPL -->aspectJavaScala(["Java/Scala (PL 2)"]):::PL2Style
+areaPL -->aspectCPP(["C/C++ (PL 3)"]):::PL3Style
+
+click aspectPython "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectPython.md"
+click aspectJava "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectJava.md"
+click aspectCPP "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectCPP.md"
+```
