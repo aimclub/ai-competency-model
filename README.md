@@ -1,6 +1,6 @@
 # Банк Компетенций
-[**Таблица ролей**]() <br>
-[**Краткая таблица компетенций профессий**]()
+[**Подробная таблица ролей**](https://github.com/VoidSubjucator/Competence-Bank/blob/main/RolesCompetencies.md) <br>
+[**Краткая таблица компетенций профессий**](https://github.com/VoidSubjucator/Competence-Bank/blob/main/ProfessionsСlearly.md)
 ## Граф компетенций
 ```mermaid
 graph LR;
