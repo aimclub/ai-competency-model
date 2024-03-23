@@ -14,7 +14,9 @@ classDef PLStyle fill:#FF99CC,stroke:#333,stroke-width:1px
 classDef LCStyle fill:#66B2FF,stroke:#333,stroke-width:1px
 classDef AISStyle fill:#CC99FF,stroke:#333,stroke-width:1px
 
+classDef WhiteSpace fill:#FFFFFF,stroke:#FFFFFF,stroke-width:1px
 
+whiteSpace[ ]:::WhiteSpace
 
 aspectProbabilityStatistics(["Основы теории вероятностей, математической статистики и теории информации"]):::MathStyle ---areaMath["`**Математические основы ИИ (MF 1)**`"]:::MathStyle
 aspectBayesStatistics(["Байесовская статистика и моделирование"]):::MathStyle ---areaMath
