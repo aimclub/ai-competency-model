@@ -1,4 +1,6 @@
 # Банк Компетенций
+[**Таблица ролей**]() <br>
+[**Краткая таблица компетенций профессий**]()
 ## Граф компетенций
 ```mermaid
 graph LR;
@@ -16,7 +18,7 @@ classDef AISStyle fill:#CC99FF,stroke:#333,stroke-width:1px
 
 classDef WhiteSpace fill:#FFFFFF,stroke:#FFFFFF,stroke-width:1px
 
-whiteSpace[ ]:::WhiteSpace
+whiteSpace1[ ]:::WhiteSpace
 
 aspectProbabilityStatistics(["Основы теории вероятностей, математической статистики и теории информации"]):::MathStyle ---areaMath["`**Математические основы ИИ (MF 1)**`"]:::MathStyle
 aspectBayesStatistics(["Байесовская статистика и моделирование"]):::MathStyle ---areaMath
@@ -48,6 +50,8 @@ aspectKnowledgeManagement(["Управление знаниями (O 1)"]):::Oth
 aspectMultiAgentAlgo(["Мульти-агентные алгоритмы (O 2)"]):::OtherStyle ---areaOther
 aspectIntellectualOpti(["Интеллектуальные методы оптимизации (O 3)"]):::OtherStyle ---areaOther
 
+whiteSpace[ ]:::WhiteSpace
+whiteSpace[ ]:::WhiteSpace
 
 areaMath ---domainMath[/"`**Математика**`"/]:::DomainStyle
 areaBD ---domainMath
@@ -125,5 +129,3 @@ click aspectStrategyEcoSystemAI "https://github.com/VoidSubjucator/Competence-Ba
 
 click aspectTrustedAI "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/AIS/aspectTrustedAI.md"
 ```
-
-
