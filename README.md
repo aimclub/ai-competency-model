@@ -1,69 +1,87 @@
 # Банк Компетенций
-Банк компетенций представлен приведенным ниже набором простых mermaid-схем, каждая из которых отвечает за свою область. Элементы схемы, обозначающие роли и направления, являются кликабельными (CTRL + ЛКМ) ссылками, открывающими документ (markdown-файл) с более подробным описанием соответствующих компетенций.
-## Математика
+## Граф компетенций
 ```mermaid
-graph TD;
-classDef areaMathStyle fill:#CCFFFF,stroke:#333,stroke-width:1px
-classDef areasMath fill:#66FFFF,stroke:#333,stroke-width:1px
-classDef jobMath fill:#99CCFF,stroke:#333,stroke-width:1px
-classDef aspectMathStyle fill:#3BE0EC,stroke:#333,stroke-width:1px
-classDef jobMathStyle fill:#66B2FF,stroke:#333,stroke-width:1px
+graph LR;
+classDef DomainStyle fill:#E0E0E0,stroke:#333,stroke-width:2px
 
-AreaMath{{"`**Математические основы ИИ (MF 1)**`"}}:::areaMathStyle -->aspectProbabilityStatistics(["Основы теории вероятностей, <br> математической статистики <br> и теории информации"]):::aspectMathStyle
-AreaMath -->aspectBayesStatistics(["Байесовская статистика <br> и моделирование"]):::aspectMathStyle
-AreaMath -->aspectNumericMethods(["Численные <br> методы"]):::aspectMathStyle
-AreaMath -->aspectMLStatistics(["Статистические <br> основы МО"]):::aspectMathStyle
-AreaMath -->aspectAdditionalAIMath(["Дополнительные главы <br> математической теории ИИ"]):::aspectMathStyle
+classDef MathStyle fill:#CCFFFF,stroke:#333,stroke-width:1px
+classDef BDStyle fill:#CCFFCC,stroke:#333,stroke-width:1px
+classDef MLStyle fill:#FFCC99,stroke:#333,stroke-width:1px
+classDef DLStyle fill:#FDE406,stroke:#333,stroke-width:1px
+classDef OtherStyle fill:#FF9999,stroke:#333,stroke-width:1px
 
-aspectProbabilityStatistics ---jobsMath["Роли"]:::jobMath
-aspectBayesStatistics ---jobsMath
-aspectNumericMethods ---jobsMath
-aspectMLStatistics ---jobsMath
-aspectAdditionalAIMath ---jobsMath
+classDef PLStyle fill:#FF99CC,stroke:#333,stroke-width:1px
+classDef LCStyle fill:#66B2FF,stroke:#333,stroke-width:1px
+classDef AISStyle fill:#CC99FF,stroke:#333,stroke-width:1px
 
-jobsMath -->MathJobDataAnalyst(["Data Analyst"]):::jobMathStyle
-jobsMath -->MathJobDomainMLSpecialist(["Domain ML Specialist"]):::jobMathStyle
-jobsMath -->MathJobMLResearcher(["ML Researcher"]):::jobMathStyle
+
+
+aspectProbabilityStatistics(["Основы теории вероятностей, математической статистики и теории информации"]):::MathStyle ---areaMath["`**Математические основы ИИ (MF 1)**`"]:::MathStyle
+aspectBayesStatistics(["Байесовская статистика и моделирование"]):::MathStyle ---areaMath
+aspectNumericMethods(["Численные методы"]):::MathStyle ---areaMath
+aspectMLStatistics(["Статистические основы МО"]):::MathStyle ---areaMath
+aspectAdditionalAIMath(["Дополнительные главы математической теории ИИ"]):::MathStyle ---areaMath
+
+aspectPreDataAnalysis(["Предварительный <br> анализ данных (BD 1)"]):::BDStyle ---areaBD["`**Работа с данными**`"]:::BDStyle
+aspectDataMarkCollection(["Методы и инструменты сбора <br> и разметки данных (BD 1)"]):::BDStyle ---areaBD
+aspectDataUnderstanding(["Понимание <br> данных (BD 2)"]):::BDStyle ---areaBD
+aspectDataStoraging(["Модели (технологии) <br> хранения данных (BD 3)"]):::BDStyle ---areaBD
+aspectDataProcessing(["Модели (технологии) <br> обработки данных (BD 4)"]):::BDStyle ---areaBD
+aspectBDInfrastructure(["Дополнительные технологии <br> организации инфраструктуры БД (BD 5)"]):::BDStyle ---areaBD
+
+aspectHistoryTrends(["История развития и <br> основные тренды <br> современного ИИ (ML 1)"]):::MLStyle ---areaML["`**Машинное обучение**`"]:::MLStyle
+aspectClassicAlgo(["Классические алгоритмы <br> машинного обучения (ML 2)"]):::MLStyle ---areaML
+aspectMLStability(["Методы повышения устойчивости, <br> надежности, безопасности <br> алгоритмов МО (ML 3)"]):::MLStyle ---areaML
+aspectReinforcementLearning(["Обучение с <br> подкреплением (ML 4)"]):::MLStyle ---areaML
+aspectAutoML(["Автоматическое машинное <br> обучение (ML 5)"]):::MLStyle ---areaML
+aspectNonStandardLearningAlgo(["Алгоритмы обучения <br> на нестандартных объемах <br> данных (ML 6)"]):::MLStyle ---areaML
+
+aspectDeepNeuro(["Нейронные сети, глубокие <br> нейронные сети (DL 1)"]):::DLStyle ---areaDL["`**Глубокое обучение**`"]:::DLStyle
+aspectDeepNeuroArchitecture(["Современные архитектуры <br> генеративных глубоких <br> сетей (DL 2)"]):::DLStyle  ---areaDL
+aspectComputerVision(["Компьютерное <br> зрение (DL 3)"]):::DLStyle ---areaDL
+aspectLanguageProcessing(["Обработка естественного <br> языка (DL 4)"]):::DLStyle ---areaDL
+aspectVoiceRecognition(["Распознавание и <br> генерация речи (DL 5)"]):::DLStyle ---areaDL
+
+aspectKnowledgeManagement(["Управление знаниями (O 1)"]):::OtherStyle ---areaOther{{"`**Другие направления ИИ**`"}}:::OtherStyle
+aspectMultiAgentAlgo(["Мульти-агентные алгоритмы (O 2)"]):::OtherStyle ---areaOther
+aspectIntellectualOpti(["Интеллектуальные методы оптимизации (O 3)"]):::OtherStyle ---areaOther
+
+
+areaMath ---domainMath[/"`**Математика**`"/]:::DomainStyle
+areaBD ---domainMath
+areaML ---domainMath
+areaDL ---domainMath
+areaOther ---domainMath
+
+domainMath ---title{{"`**База ИИ-компетенций**`"}}:::DomainStyle
+
+title ---domainDev[/"`**Разработка**`"/]:::DomainStyle
+
+domainDev ---areaPL["`**Языки программирования**`"]:::PLStyle
+domainDev ---areaLC["`**Жизненный цикл систем ИИ**`"]:::LCStyle
+domainDev ---areaAIS["`**Безопасность ИИ**`"]:::AISStyle
+
+areaPL ---aspectPython(["Python (PL 1)"]):::PLStyle
+areaPL ---aspectJava(["Java/Scala (PL 2)"]):::PLStyle
+areaPL ---aspectCPP(["C/C++ (PL 3)"]):::PLStyle
+
+areaLC ---aspectBusinessProblem(["Понимание бизнес-проблемы <br> (LC 1, LC 2)"]):::LCStyle
+areaLC ---aspectEXModeling(["Моделирование, проведение <br> экспериментов (LC 2)"]):::LCStyle
+areaLC ---aspectAISysArchitecture(["Архитектура систем ИИ <br> Проектирование (ML System Design) <br> (LC 3)"]):::LCStyle
+areaLC ---aspectLCControl(["Управление процессами <br> жизненного цикла ИИ <br> продукта (LC 4, LC 5)"]):::LCStyle
+areaLC ---aspectIndustrialAI(["Промышленная разработка <br> систем ИИ, развертывание <br> и эксплуатация (LC 6)"]):::LCStyle
+areaLC ---aspectAIDataCompetencies(["Центр компетенций <br> по ИИ и работе с <br> данными (LC 7)"]):::LCStyle
+areaLC ---aspectStrategyEcoSystemAI(["Стратегия ИИ. Цифровая <br> экосистема с ИИ (LC 8)"]):::LCStyle
+
+areaAIS ---aspectTrustedAI(["Доверенный ИИ, управление <br> рисками и безопасностью <br> систем ИИ (AI S 1)"]):::AISStyle
+
+
 
 click aspectProbabilityStatistics "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/aspectProbabilityStatistics.md"
 click aspectBayesStatistics "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/aspectBayesStatistics.md"
 click aspectNumericMethods "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/aspectNumericMethods.md"
 click aspectMLStatistics "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/aspectMLStatistics.md"
 click aspectAdditionalAIMath "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/AIMathBasics/aspectAdditionalAIMath.md"
-
-click MathJobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md" _blank
-click MathJobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md" _blank
-click MathJobMLResearcher "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLResearcher.md" _blank
-```
-
-```mermaid
-graph TD;
-classDef BD1Style fill:#CCFFCC,stroke:#333,stroke-width:1px
-classDef BD2Style fill:#99FF99,stroke:#333,stroke-width:1px
-classDef BD3Style fill:#66FF66,stroke:#333,stroke-width:1px
-classDef BD4Style fill:#80FF00,stroke:#333,stroke-width:1px
-classDef BD5Style fill:#00CC00,stroke:#333,stroke-width:1px
-classDef BDJobsStyle fill:#50c878,stroke:#333,stroke-width:1px
-
-areaBD{{"`**Работа с данными**`"}}:::BD1Style -->aspectPreDataAnalysis(["Предварительный <br> анализ данных (BD 1)"]):::BD1Style
-areaBD -->aspectDataMarkCollection(["Методы и инструменты сбора <br> и разметки данных (BD 1)"]):::BD1Style
-areaBD -->aspectDataUnderstanding(["Понимание <br> данных (BD 2)"]):::BD2Style
-areaBD -->aspectDataStoraging(["Модели (технологии) <br> хранения данных (BD 3)"]):::BD3Style
-areaBD -->aspectDataProcessing(["Модели (технологии) <br> обработки данных (BD 4)"]):::BD4Style
-areaBD -->aspectBDInfrastructure(["Дополнительные технологии <br> организации инфраструктуры БД (BD 5)"]):::BD5Style
-
-aspectPreDataAnalysis ---BDJobs["Роли"]:::BD1Style
-aspectDataMarkCollection ---BDJobs
-aspectDataUnderstanding ---BDJobs
-aspectDataStoraging ---BDJobs
-aspectDataProcessing ---BDJobs
-aspectBDInfrastructure ---BDJobs
-
-BDJobs -->jobDataEngineer(["Data Engineer"]):::BDJobsStyle
-BDJobs -->jobDataAnalyst(["Data Analyst"]):::BD2Style
-BDJobs -->jobAIPM(["AI PM"]):::BD2Style
-BDJobs -->jobDomainMLSpecialist(["Domain ML <br> Specialist"]):::BD2Style
-BDJobs -->jobDataArchitect(["Data Architect"]):::BD3Style
 
 click aspectPreDataAnalysis "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectPreDataAnalysis.md"
 click aspectDataMarkCollection "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectDataMarkCollection.md"
@@ -72,43 +90,6 @@ click aspectDataStoraging "https://github.com/VoidSubjucator/Competence-Bank/blo
 click aspectDataProcessing "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectDataProcessing.md"
 click aspectBDInfrastructure "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/BD/aspectBDInfrastructure.md"
 
-click jobDataEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataEngineer.md"
-click jobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md"
-click jobAIPM "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIPM.md"
-click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md"
-click jobDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataArchitect.md"
-```
-
-```mermaid
-graph TD;
-classDef ML1Style fill:#FFCC99,stroke:#333,stroke-width:1px
-classDef ML2Style fill:#FFF999,stroke:#333,stroke-width:1px
-classDef ML3Style fill:#FFF666,stroke:#333,stroke-width:1px
-classDef ML4Style fill:#FFB266,stroke:#333,stroke-width:1px
-classDef ML5Style fill:#FF9933,stroke:#333,stroke-width:1px
-classDef ML6Style fill:#CC6600,stroke:#333,stroke-width:1px
-classDef MLJobStyle fill:#FFFFCC,stroke:#333,stroke-width:1px
-
-areaML{{"`**Машинное обучение**`"}}:::ML1Style -->aspectHistoryTrends(["История развития и <br> основные тренды <br> современного ИИ (ML 1)"]):::ML1Style
-areaML -->aspectClassicAlgo(["Классические алгоритмы <br> машинного обучения (ML 2)"]):::ML2Style
-areaML -->aspectMLStability(["Методы повышения устойчивости, <br> надежности, безопасности <br> алгоритмов МО (ML 3)"]):::ML3Style
-areaML -->aspectReinforcementLearning(["Обучение с <br> подкреплением (ML 4)"]):::ML4Style
-areaML -->aspectAutoML(["Автоматическое машинное <br> обучение (ML 5)"]):::ML5Style
-areaML -->aspectNonStandardLearningAlgo(["Алгоритмы обучения <br> на нестандартных объемах <br> данных (ML 6)"]):::ML6Style
-
-aspectHistoryTrends ---jobsHeaderML["Роли"]:::ML1Style
-aspectClassicAlgo ---jobsHeaderML
-aspectMLStability ---jobsHeaderML
-aspectReinforcementLearning ---jobsHeaderML
-aspectAutoML ---jobsHeaderML
-aspectNonStandardLearningAlgo ---jobsHeaderML
-
-jobsHeaderML -->jobAIArchitect(["AI Architect"]):::MLJobStyle
-jobsHeaderML -->jobMLResearcher(["ML Researcher"]):::MLJobStyle
-jobsHeaderML -->jobMLEngineer(["ML Engineer"]):::MLJobStyle
-jobsHeaderML -->jobDataAnalyst(["Data Analyst"]):::MLJobStyle
-jobsHeaderML -->jobDomainMLSpecialist(["Domain ML Specialist"]):::MLJobStyle
-
 click aspectHistoryTrends "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/ML/aspectHistoryTrends.md"
 click aspectClassicAlgo "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/ML/aspectClassicAlgo.md"
 click aspectMLStability "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/ML/aspectMLStability.md"
@@ -116,131 +97,21 @@ click aspectReinforcementLearning "https://github.com/VoidSubjucator/Competence-
 click aspectAutoML "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/ML/aspectAutoML.md"
 click aspectNonStandardLearningAlgo "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/ML/aspectNonStandardLearningAlgo.md"
 
-click jobAIArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIArchitect.md"
-click jobMLResearcher "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLResearcher.md"
-click jobMLEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLEngineer.md"
-click jobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md"
-click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md"
-```
-
-```mermaid
-graph TD;
-classDef DL1Style fill:#FDE406,stroke:#333,stroke-width:1px
-classDef DL2Style fill:#CCCC00,stroke:#333,stroke-width:1px
-classDef DL3Style fill:#E5CA1C,stroke:#333,stroke-width:1px
-classDef DL4Style fill:#FFE5CC,stroke:#333,stroke-width:1px
-classDef DL5Style fill:#FFCC99,stroke:#333,stroke-width:1px
-classDef DLJobStyle fill:#ffd700,stroke:#333,stroke-width:1px
-
-areaDL{{"`**Глубокое обучение**`"}}:::DL1Style -->aspectDeepNeuro(["Нейронные сети, глубокие <br> нейронные сети (DL 1)"]):::DL1Style
-areaDL -->aspectDeepNeuroArchitecture(["Современные архитектуры <br> генеративных глубоких <br> сетей (DL 2)"]):::DL2Style
-areaDL -->aspectComputerVision(["Компьютерное <br> зрение (DL 3)"]):::DL3Style
-areaDL -->aspectLanguageProcessing(["Обработка естественного <br> языка (DL 4)"]):::DL4Style
-areaDL -->aspectVoiceRecognition(["Распознавание и <br> генерация речи (DL 5)"]):::DL5Style
-
-aspectDeepNeuro ---jobsHeaderDL["Роли"]:::DL1Style
-aspectDeepNeuroArchitecture ---jobsHeaderDL
-aspectComputerVision ---jobsHeaderDL
-aspectLanguageProcessing ---jobsHeaderDL
-aspectVoiceRecognition ---jobsHeaderDL
-
-jobsHeaderDL -->jobMLResearcher(["ML Researcher"]):::DLJobStyle
-jobsHeaderDL -->jobMLEngineer(["ML Engineer"]):::DLJobStyle
-jobsHeaderDL -->jobDataAnalyst(["Data Analyst"]):::DLJobStyle
-jobsHeaderDL -->jobDomainMLSpecialist(["Domain ML Specialist"]):::DLJobStyle
-jobsHeaderDL -->jobAIArchitect(["AI Architect"]):::DLJobStyle
-
 click aspectDeepNeuro "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectDeepNeuro.md"
 click aspectDeepNeuroArchitecture "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectDeepNeuroArchitecture.md"
 click aspectComputerVision "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectComputerVision.md"
 click aspectLanguageProcessing "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectLanguageProcessing.md"
 click aspectVoiceRecognition "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/DL/aspectVoiceRecognition.md"
 
-click jobMLResearcher "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLResearcher.md"
-click jobMLEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLEngineer.md"
-click jobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md"
-click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md"
-click jobAIArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIArchitect.md"
-```
-
-```mermaid
-graph TD;
-classDef O1Style fill:#FFCCCC,stroke:#333,stroke-width:1px
-classDef O2Style fill:#FF9999,stroke:#333,stroke-width:1px
-classDef O3Style fill:#FF6666,stroke:#333,stroke-width:1px
-classDef O4Style fill:#FF3333,stroke:#333,stroke-width:1px
-
-areaO{{"`**Другие направления ИИ**`"}}:::O1Style -->aspectKnowledgeManagement(["Управление знаниями (O 1)"]):::O2Style
-areaO -->aspectMultiAgentAlgo(["Мульти-агентные алгоритмы (O 2)"]):::O3Style
-areaO -->aspectIntellectualOpti(["Интеллектуальные методы оптимизации (O 3)"]):::O4Style
-
-aspectKnowledgeManagement ---jobDataArchitect(["Data Architect"]):::O1Style
-
 click aspectKnowledgeManagement "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/Other/aspectKnowledgeManagement.md"
 click aspectMultiAgentAlgo "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/Other/aspectMultiAgentAlgo.md"
 click aspectIntellectualOpti "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Math/Other/aspectIntellectualOpti.md"
 
-click jobDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataArchitect.md"
-```
 
-## Разработка
-```mermaid
-graph TD;
-classDef PL1Style fill:#FFCCE5,stroke:#333,stroke-width:1px
-classDef PL2Style fill:#DC71C3,stroke:#333,stroke-width:1px
-classDef PL3Style fill:#B445C0,stroke:#333,stroke-width:1px
-
-areaPL{{"`**Языки программирования**`"}}:::PL1Style -->aspectPython(["Python (PL 1)"]):::PL1Style
-areaPL -->aspectJava(["Java/Scala (PL 2)"]):::PL2Style
-areaPL -->aspectCPP(["C/C++ (PL 3)"]):::PL3Style
 
 click aspectPython "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectPython.md"
 click aspectJava "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectJava.md"
 click aspectCPP "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/PL/aspectCPP.md"
-```
-
-```mermaid
-graph TD;
-classDef LC1Style fill:#CCE5FF,stroke:#333,stroke-width:1px
-classDef LC2Style fill:#66B2FF,stroke:#333,stroke-width:1px
-classDef LC3Style fill:#3399FF,stroke:#333,stroke-width:1px
-classDef LC4Style fill:#6666FF,stroke:#333,stroke-width:1px
-classDef LC5Style fill:#B266FF,stroke:#333,stroke-width:1px
-classDef jobsLCStyle fill:#CCFFFF,stroke:#333,stroke-width:1px
-
-areaLC{{"`**Жизненный цикл систем ИИ**`"}}:::LC1Style -->aspectBusinessProblem(["Понимание бизнес-проблемы <br> (LC 1, LC 2)"]):::LC1Style
-areaLC -->aspectEXModeling(["Моделирование, проведение <br> экспериментов (LC 2)"]):::LC1Style
-areaLC -->aspectAISysArchitecture(["Архитектура систем ИИ <br> Проектирование (ML System Design) <br> (LC 3)"]):::LC1Style
-areaLC -->aspectLCControl(["Управление процессами <br> жизненного цикла ИИ <br> продукта (LC 4, LC 5)"]):::LC2Style
-areaLC -->aspectIndustrialAI(["Промышленная разработка <br> систем ИИ, развертывание <br> и эксплуатация (LC 6)"]):::LC3Style
-areaLC -->aspectAIDataCompetencies(["Центр компетенций <br> по ИИ и работе с <br> данными (LC 7)"]):::LC4Style
-areaLC -->aspectStrategyEcoSystemAI(["Стратегия ИИ. Цифровая <br> экосистема с ИИ (LC 8)"]):::LC5Style
-
-aspectBusinessProblem ---jobsLC["Роли"]:::LC1Style
-aspectEXModeling ---jobsLC
-aspectAISysArchitecture ---jobsLC
-aspectLCControl ---jobsLC
-aspectIndustrialAI ---jobsLC
-aspectAIDataCompetencies ---jobsLC
-aspectStrategyEcoSystemAI ---jobsLC
-
-jobsLC -->jobAIPM(["AI PM"]):::jobsLCStyle
-jobsLC -->jobAIArchitect(["AI Architect"]):::jobsLCStyle
-jobsLC -->jobDomainMLSpecialist(["Domain ML Specialist"]):::jobsLCStyle
-jobsLC -->jobMLResearcher(["ML Researcher"]):::jobsLCStyle
-jobsLC -->jobDataArchitect(["Data Architect"]):::jobsLCStyle
-jobsLC -->jobDataEngineer(["Data Engineer"]):::jobsLCStyle
-jobsLC -->jobDataAnalyst(["Data Analyst"]):::jobsLCStyle
-jobsLC -->jobAICDO(["AI CDO"]):::jobsLCStyle
-
-click jobAIPM "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIPM.md"
-click jobAIArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAIArchitect.md"
-click jobDomainMLSpecialist "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDomainMLSpecialist.md"
-click jobMLResearcher "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobMLResearcher.md"
-click jobDataArchitect "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataArchitect.md"
-click jobDataEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataEngineer.md"
-click jobDataAnalyst "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobDataAnalyst.md"
-click jobAICDO "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAICDO.md"
 
 click aspectBusinessProblem "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectBusinessProblem.md"
 click aspectEXModeling "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectEXModeling.md"
@@ -249,17 +120,8 @@ click aspectLCControl "https://github.com/VoidSubjucator/Competence-Bank/blob/ma
 click aspectIndustrialAI "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectIndustrialAI.md"
 click aspectAIDataCompetencies "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectAIDataCompetencies.md"
 click aspectStrategyEcoSystemAI "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/LC/aspectStrategyEcoSystemAI.md"
-```
-
-```mermaid
-graph TD;
-classDef AIS1Style fill:#CC99FF,stroke:#333,stroke-width:1px
-classDef AIS2Style fill:#B266FF,stroke:#333,stroke-width:1px
-
-areaAIS{{"`**Безопасность ИИ**`"}}:::AIS1Style -->aspectTrustedAI(["Доверенный ИИ, управление <br> рисками и безопасностью <br> систем ИИ (AI S 1)"]):::AIS2Style
-aspectTrustedAI -->jobAISecurityEngineer(["AI Security Engineer"]):::AIS1Style
 
 click aspectTrustedAI "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Dev/AIS/aspectTrustedAI.md"
-
-click jobAISecurityEngineer "https://github.com/VoidSubjucator/Competence-Bank/blob/main/Jobs/jobAISecurityEngineer.md"
 ```
+
+
