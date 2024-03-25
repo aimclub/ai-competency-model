@@ -1,7 +1,23 @@
 # Банк Компетенций
-[**Подробная таблица ролей**](https://github.com/VoidSubjucator/Competence-Bank/blob/main/RolesCompetencies.md) <br>
-[**Краткая таблица компетенций профессий**](https://github.com/VoidSubjucator/Competence-Bank/blob/main/ProfessionsСlearly.md)
+
+[![Acknowledgement ITMO](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/ITMO_badge_rus.svg)](https://itmo.ru/)
+[![Acknowledgement SAI](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/SAI_badge.svg)](https://sai.itmo.ru/)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
+Этот репозиторий создан для хранения матрицы компетенций,
+которые могут быть полезны при создании образовальных программ в области ИИ.
+
+Все материалы доступны под лицензией BSD-3.
+
+## Доступные материалы
+* [**Подробная таблица ролей**](https://github.com/VoidSubjucator/Competence-Bank/blob/main/RolesCompetencies.md) <br>
+* [**Краткая таблица компетенций профессий**](https://github.com/VoidSubjucator/Competence-Bank/blob/main/ProfessionsСlearly.md)
+
 ## Граф компетенций
+
+В случае проблем с отображением интерактивной версии графа, 
+вы можете использовать [статичный](./Extra/itmo-ai_competence-bank.pdf) вариант.
+
 ```mermaid
 graph LR;
 classDef DomainStyle fill:#E0E0E0,stroke:#333,stroke-width:2px
