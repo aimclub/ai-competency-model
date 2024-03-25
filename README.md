@@ -1,4 +1,4 @@
-# Банк Компетенций
+# Банк компетенций в области ИИ
 
 [![Acknowledgement ITMO](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/ITMO_badge_rus.svg)](https://itmo.ru/)
 [![Acknowledgement SAI](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/SAI_badge.svg)](https://sai.itmo.ru/)
