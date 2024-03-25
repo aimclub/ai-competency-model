@@ -1,4 +1,4 @@
-# Банк компетенций в области ИИ
+# Компетенции в области ИИ
 
 [![Acknowledgement ITMO](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/ITMO_badge_rus.svg)](https://itmo.ru/)
 [![Acknowledgement SAI](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/SAI_badge.svg)](https://sai.itmo.ru/)
@@ -19,7 +19,7 @@
 * Профессиональные роли - [**наглядно**](./ProfessionsСlearly.md);
 * Принципы разработки компетентностной модели в сфере ИИ - [**презентация**](./Extra/принципы_разработки_компетентностной_модели_в_сфере_ИИ.pdf).
 
-## Граф компетенций
+## Граф компетентностной модели
 
 Граф компетентностной модели отражает структуру связей между основными понятиями и дисциплинами, 
 необходимыми для освоения  [профессиональных ролей](./Img/role_model.png) в сфере ИИ. 
