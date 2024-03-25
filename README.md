@@ -140,5 +140,5 @@ areaAIS ---aspectTrustedAI([<a href='https://github.com/itmo-ai/Competence-Bank/
 
 ## Оформление репозитория
 
-- Павел Бухановский, лаборант ФЦТ.
-- Николай Никитин, доцент ФЦТ, лидер сообщества [ITMO.Opensource](https://t.me/itmo_opensource)
+- Павел Бухановский, лаборант ФЦТ;
+- Николай Никитин, доцент ФЦТ, лидер сообщества [ITMO.Opensource](https://t.me/itmo_opensource).
