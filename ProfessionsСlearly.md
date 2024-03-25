@@ -1,5 +1,5 @@
 # Компетенции профессий
-| **Формулировка копетенции (проект)** | Data Engineer | ML Researcher| AI Architect | ML Researcher | ML Engineer | Роль AI PM |  Data Analyst | AI CDO | AI Qualified Ordering Specialist | Domain ML Specialist | Роль AI Security Engineer|
+| **Формулировка копетенции (проект)** | <sub>Data Engineer</sub> | <sub>ML Researcher</sub> | <sub>AI Architect</sub> | <sub>ML Researcher</sub> | <sub>ML Engineer</sub> | <sub>Роль AI PM</sub> |  <sub>Data Analyst</sub> | <sub>AI CDO</sub> | <sub>AI Qualified Ordering Specialis</sub> | <sub>Domain ML Specialist</sub> | <sub>Роль AI Security Engineer</sub> |
 |--------|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | Способен применять современную теоретическую математику для разработки новых алгоритмов и формулирования перспективных задач ИИ.  |   |   | X | X | X |   | X |   |   | X |   |
 | Способен осуществлять предварительный анализ данных и применять методы сбора и разметки данных | X |   |   |   |   |   |   |   |   |   |   |
