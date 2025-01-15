@@ -1,7 +1,7 @@
 # Компетенции в области ИИ
 
 [![Acknowledgement ITMO](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/ITMO_badge_rus.svg)](https://itmo.ru/)
-[![Acknowledgement SAI](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/SAI_badge.svg)](https://sai.itmo.ru/)
+[![Acknowledgement NCCR](https://raw.githubusercontent.com/aimclub/open-source-ops/43bb283758b43d75ec1df0a6bb4ae3eb20066323/badges/NCCR_badge.svg)](https://nccr.itmo.ru/)
 [![Visitors](https://api.visitorbadge.io/api/visitors?path=itmo-ai%2F25Competence-Bank&countColor=%23263759&style=plastic&labelStyle=lower)](https://visitorbadge.io/status?path=itmo-ai%2F25Competence-Bank)
 [![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
 
@@ -123,6 +123,15 @@ areaAIS ---aspectTrustedAI([<a href='https://github.com/itmo-ai/Competence-Bank/
 Если вы хотите предложить дополнения или изменения в модель компетенций - 
 это можно сделать через создание [Issue](https://github.com/itmo-ai/ai-competency-model/issues). 
 Дополнительный контакт: alexandra.klimova@itmo.ru
+
+
+## Финансирование
+
+Реализовано при финансовой поддержке Фонда поддержки проектов
+Национальной технологической инициативы в рамках реализации "дорожной карты"
+развития высокотехнологичного направления "Искусственный интеллект" на период до 2030 года (Договор № 70-2021-00187).
+
+
 
 ## Авторы модели компетенций
 
